@@ -10,6 +10,7 @@ import ratelimit from './middlewares/ratelimit.js';
 import timeout from './middlewares/timeout.js';
 import token from './middlewares/token.js';
 import nsfwService from './services/nsfwImageClassifier.js';
+(async () => await nsfwService.loadModel())();
 
 const app = express();
 
@@ -18,8 +19,6 @@ app.use(morgan);
 app.use(ratelimit);
 app.use(timeout());
 app.use(token);
-
-(async () => await nsfwService.loadModel())();
 
 app.get('/api/v1/nsfw-classification', async (req, res) => {
 	const { path: imagePath, url: imageUrl } = req.query;

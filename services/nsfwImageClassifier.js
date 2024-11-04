@@ -12,13 +12,13 @@ const loadModel = async () => {
 	}
 };
 
-const convertToPercentages = (predictions) =>
+const convertToPercentages = predictions =>
 	predictions.map(({ className, probability }) => ({
 		className,
 		probability: +(probability * 100).toFixed(2),
 	}));
 
-const classifyImage = async (imageBuffer) => {
+const classifyImage = async imageBuffer => {
 	const cacheKey = imageBuffer.subarray(0, 100).toString('base64');
 	const cachedResult = cache.get(cacheKey);
 	if (cachedResult && Date.now() - cachedResult.timestamp < CACHE_TTL) {

@@ -1,0 +1,36 @@
+{
+  "name": "nsfwjs",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sefinek/nsfwjs#readme",
+  "bugs": {
+    "url": "https://github.com/sefinek/nsfwjs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sefinek/nsfwjs.git"
+  },
+  "license": "MIT",
+  "author": "Sefinek <contact@nekosia.cat> (https://sefinek.net)",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "up": "ncu -u && npm install && npm update && npm audit fix",
+    "copy": "powershell -Command \"Copy-Item -Path 'node_modules/@tensorflow/tfjs-node/deps/lib/tensorflow.dll' -Destination 'node_modules/@tensorflow/tfjs-node/lib/napi-v8/'\""
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express": "^5.0.1",
+    "express-rate-limit": "^7.4.1",
+    "express-timeout-handler": "^2.2.2",
+    "helmet": "^8.0.0",
+    "morgan": "^1.10.0",
+    "nsfwjs": "^4.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "globals": "^15.11.0"
+  }
+}

@@ -56,10 +56,5 @@ app.use((err, req, res, next) => {
 	return next;
 });
 
-app.listen(process.env.PORT, () => {
-	if (process.send) {
-		process.send('ready');
-	} else {
-		console.log(`Server running at http://127.0.0.1:${process.env.PORT}`);
-	}
-});
+const port = process.env.PORT;
+app.listen(port, () => process.send ? process.send('ready') : console.log(`Server running at ${process.env.DOMAIN}:${port}`));

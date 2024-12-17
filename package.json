@@ -20,17 +20,17 @@
   },
   "dependencies": {
     "@tensorflow/tfjs-node": "^4.22.0",
-    "axios": "^1.7.7",
-    "dotenv": "^16.4.5",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
     "express": "^5.0.1",
-    "express-rate-limit": "^7.4.1",
+    "express-rate-limit": "^7.5.0",
     "express-timeout-handler": "^2.2.2",
     "helmet": "^8.0.0",
     "morgan": "^1.10.0",
-    "nsfwjs": "^4.2.0"
+    "nsfwjs": "^4.2.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.14.0",
-    "globals": "^15.11.0"
+    "@eslint/js": "^9.17.0",
+    "globals": "^15.13.0"
   }
 }

@@ -6,7 +6,7 @@ import axios from 'axios';
 import fs from 'node:fs';
 import path from 'node:path';
 import morgan from './middlewares/morgan.js';
-import ratelimit from './middlewares/ratelimit.js';
+import rateLimit from './middlewares/ratelimit.js';
 import timeout from './middlewares/timeout.js';
 import token from './middlewares/token.js';
 import nsfwService from './services/nsfwImageClassifier.js';
@@ -16,7 +16,7 @@ const app = express();
 
 app.use(helmet());
 app.use(morgan);
-app.use(ratelimit);
+app.use(rateLimit);
 app.use(timeout());
 app.use(token);
 

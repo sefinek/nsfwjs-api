@@ -1,13 +1,13 @@
 const nsfw = require('nsfwjs');
-const tf = require('@tensorflow/tfjs-node');
+const { enableProdMode, node } = require('@tensorflow/tfjs-node');
 
 let model;
 const cache = new Map();
-const CACHE_TTL = 4000;
+const ttl = 4000;
 
 const loadModel = async () => {
 	if (!model) {
-		tf.enableProdMode();
+		enableProdMode();
 		model = await nsfw.load('MobileNetV2');
 	}
 };
@@ -21,7 +21,7 @@ const convertToPercentages = predictions =>
 const classifyImage = async imageBuffer => {
 	const cacheKey = imageBuffer.subarray(0, 100).toString('base64');
 	const cachedResult = cache.get(cacheKey);
-	if (cachedResult && Date.now() - cachedResult.timestamp < CACHE_TTL) {
+	if (cachedResult && Date.now() - cachedResult.timestamp < ttl) {
 		return cachedResult.data;
 	}
 
@@ -31,7 +31,7 @@ const classifyImage = async imageBuffer => {
 	}
 
 	try {
-		const tensor = tf.node.decodeImage(imageBuffer, 3);
+		const tensor = node.decodeImage(imageBuffer, 3);
 		const predictions = await model.classify(tensor);
 
 		const result = {

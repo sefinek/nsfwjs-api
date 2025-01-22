@@ -1,22 +1,22 @@
 {
-  "name": "nsfwjs",
-  "version": "1.0.0",
+  "name": "nsfwjs-api",
+  "version": "1.0.1",
   "description": "",
-  "homepage": "https://github.com/sefinek/nsfwjs#readme",
+  "homepage": "https://github.com/sefinek/nsfwjs-api#readme",
   "bugs": {
-    "url": "https://github.com/sefinek/nsfwjs/issues"
+    "url": "https://github.com/sefinek/nsfwjs-api/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sefinek/nsfwjs.git"
+    "url": "git+https://github.com/sefinek/nsfwjs-api.git"
   },
   "license": "MIT",
-  "author": "Sefinek <contact@nekosia.cat> (https://sefinek.net)",
+  "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
   "main": "index.mjs",
   "scripts": {
+    "copy": "powershell -Command \"Copy-Item -Path 'node_modules/@tensorflow/tfjs-node/deps/lib/tensorflow.dll' -Destination 'node_modules/@tensorflow/tfjs-node/lib/napi-v8/'\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "ncu -u && npm install && npm update && npm audit fix",
-    "copy": "powershell -Command \"Copy-Item -Path 'node_modules/@tensorflow/tfjs-node/deps/lib/tensorflow.dll' -Destination 'node_modules/@tensorflow/tfjs-node/lib/napi-v8/'\""
+    "up": "ncu -u && npm install && npm update && npm audit fix"
   },
   "dependencies": {
     "@tensorflow/tfjs-node": "^4.22.0",

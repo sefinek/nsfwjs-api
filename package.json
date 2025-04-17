@@ -21,8 +21,8 @@
   "dependencies": {
     "@tensorflow/tfjs-node": "^4.22.0",
     "axios": "^1.8.4",
-    "dotenv": "^16.4.7",
-    "express": "^5.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "express-rate-limit": "^7.5.0",
     "express-timeout-handler": "^2.2.2",
     "helmet": "^8.1.0",
@@ -30,7 +30,7 @@
     "nsfwjs": "^4.2.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.23.0",
+    "@eslint/js": "^9.24.0",
     "globals": "^16.0.0"
   }
 }

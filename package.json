@@ -12,7 +12,8 @@
   },
   "license": "MIT",
   "author": "Sefinek <contact@sefinek.net> (https://sefinek.net)",
-  "main": "index.mjs",
+  "type": "commonjs",
+  "main": "index.js",
   "scripts": {
     "copy": "powershell -Command \"Copy-Item -Path 'node_modules/@tensorflow/tfjs-node/deps/lib/tensorflow.dll' -Destination 'node_modules/@tensorflow/tfjs-node/lib/napi-v8/'\"",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -20,7 +21,7 @@
   },
   "dependencies": {
     "@tensorflow/tfjs-node": "^4.22.0",
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "express-rate-limit": "^7.5.0",
@@ -30,7 +31,7 @@
     "nsfwjs": "^4.2.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.24.0",
+    "@eslint/js": "^9.25.1",
     "globals": "^16.0.0"
   }
 }

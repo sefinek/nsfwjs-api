@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
 	}
 
 	if (token !== process.env.SECRET_TOKEN) {
-		return res.status(403).json({ success: false, status: 401 });
+		return res.status(403).json({ success: false, status: 403 });
 	}
 
 	next();

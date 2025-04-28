@@ -1,7 +1,7 @@
 module.exports = {
 	apps: [{
 		name: 'nsfwjs',
-		script: './index.mjs',
+		script: './index.js',
 
 		// Logging configuration
 		log_date_format: 'HH:mm:ss.SSS DD.MM.YYYY',

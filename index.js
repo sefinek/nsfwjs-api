@@ -28,9 +28,8 @@ app.get('/api/v1/nsfw-classification', async (req, res) => {
 		if (imagePath) {
 			const resolvedPath = path.resolve(imagePath);
 			if (!fs.existsSync(resolvedPath) || fs.lstatSync(resolvedPath).isDirectory()) return res.status(400).send('Invalid file path.');
-			const imageBuffer = await fs.promises.readFile(resolvedPath);
 
-			console.log(`Classifying image from path: ${imagePath}...`);
+			const imageBuffer = await fs.promises.readFile(resolvedPath);
 			const result = await nsfwService.classifyImage(imageBuffer);
 			return res.json(result);
 		}

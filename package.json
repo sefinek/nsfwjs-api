@@ -21,7 +21,6 @@
   "dependencies": {
     "@tensorflow/tfjs-node": "^4.22.0",
     "axios": "^1.11.0",
-    "env-native": "^1.1.2",
     "express": "^5.1.0",
     "express-rate-limit": "^8.0.1",
     "express-timeout-handler": "^2.2.2",

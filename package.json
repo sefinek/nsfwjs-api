@@ -15,8 +15,8 @@
   "main": "index.js",
   "scripts": {
     "copy": "powershell -Command \"Copy-Item -Path 'node_modules/@tensorflow/tfjs-node/deps/lib/tensorflow.dll' -Destination 'node_modules/@tensorflow/tfjs-node/lib/napi-v8/'\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "up": "ncu -u && npm install && npm update && npm audit fix"
+    "m": "ncu -u && npm install && npm update",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@tensorflow/tfjs-node": "^4.22.0",
